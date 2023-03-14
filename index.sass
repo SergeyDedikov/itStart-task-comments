@@ -1,6 +1,9 @@
 html
   font-size: 14px
 
+*
+  box-sizing: border-box
+
 body
   background: #f6f9fc
   font-family: "Open Sans", sans-serif
@@ -34,7 +37,7 @@ h2
   padding: 40px
   display: flex
   align-items: center
-  gap: 10px
+  gap: 5px
   flex-direction: column
 
   & *
@@ -51,7 +54,10 @@ h2
     width: 150px 
 
   & input, & textarea
-    border-width: 1px
+    padding: 5px 10px
+    font-size: inherit
+    font-family: inherit
+    color: inherit
 
 .comment
   @extend %wrapper
@@ -84,8 +90,9 @@ h2
 
 #error
   color: #8f1919
-  height: 16px
+  height: 20px
   margin-bottom: 10px
+  font-size: small
 
 @media screen and ( max-width: 768px )
   #container
