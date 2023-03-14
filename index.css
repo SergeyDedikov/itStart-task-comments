@@ -16,28 +16,39 @@ h2 {
   padding-bottom: 2rem;
 }
 
-#comments {
-  display: flex;
-  flex-direction: column;
+#container {
   width: 50vw;
   margin: 5% auto;
 }
 
-.comment {
+.comment, #new-comment {
   background: #fff;
-  position: relative;
-  margin: 20px 0;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
+#comments {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#new-comment {
+  margin: 40px 0;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.comment {
+  position: relative;
+}
 .comment__header {
   display: flex;
   gap: 15px;
   align-items: baseline;
 }
-
 .comment__author {
   font-size: 1.2rem;
   line-height: 1.4;
@@ -45,11 +56,9 @@ h2 {
   color: #9251ac;
   letter-spacing: 1px;
 }
-
 .comment__date {
   white-space: nowrap;
 }
-
 .comment__action {
   flex-grow: 1;
   display: flex;
@@ -58,9 +67,7 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
-  #comments {
+  #container {
     width: 80vw;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

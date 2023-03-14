@@ -13,19 +13,31 @@ h2
   border-bottom: 1px dotted #525f7f
   padding-bottom: 2rem
 
-#comments
-  display: flex
-  flex-direction: column
+#container
   width: 50vw
   margin: 5% auto
 
-.comment
+%wrapper
   background: #fff
-  position: relative
-  margin: 20px 0
   padding: 20px
   border-radius: 8px
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)
+
+#comments
+  display: flex
+  flex-direction: column
+  gap: 30px
+
+#new-comment
+  @extend %wrapper
+  margin: 40px 0
+  display: flex
+  gap: 15px
+  flex-direction: column
+
+.comment
+  @extend %wrapper
+  position: relative
 
   &__header
     display: flex
@@ -49,5 +61,5 @@ h2
     align-items: baseline
 
 @media screen and ( max-width: 768px )
-  #comments
+  #container
     width: 80vw
