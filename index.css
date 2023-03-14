@@ -36,9 +36,24 @@ h2 {
 
 #new-comment {
   margin: 40px 0;
+  padding: 40px;
   display: flex;
-  gap: 15px;
+  align-items: center;
+  gap: 10px;
   flex-direction: column;
+}
+#new-comment * {
+  width: 100%;
+}
+#new-comment textarea {
+  max-width: 100%;
+}
+#new-comment input[type=submit] {
+  margin-top: 30px;
+  width: 50%;
+}
+#new-comment input[type=date] {
+  width: 150px;
 }
 
 .comment {
@@ -72,6 +87,7 @@ h2 {
 
 #error {
   color: #6d0f0f;
+  height: 16px;
 }
 
 @media screen and (max-width: 768px) {
