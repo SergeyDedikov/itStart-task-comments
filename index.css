@@ -90,6 +90,28 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
 }
+.comment__btn {
+  border: none;
+  background-color: transparent;
+  background-image: url("./img/icon_not_icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18px;
+  aspect-ratio: 1;
+}
+.comment__btn:hover {
+  cursor: pointer;
+}
+.comment__btn_type_remove {
+  background-image: url("./img/icon_delete.png");
+}
+.comment__btn_type_like {
+  background-image: url("./img/icon_like_empty.png");
+}
+.comment__btn_type_like.liked {
+  background-image: url("./img/icon_like_full.png");
+}
 
 .invalid {
   border-color: #e30f0f;

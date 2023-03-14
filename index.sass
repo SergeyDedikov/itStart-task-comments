@@ -4,6 +4,13 @@ html
 *
   box-sizing: border-box
 
+=background($imgpath, $position: center, $repeat: no-repeat)
+  background:
+    image: url($imgpath)
+    position: $position
+    repeat: $repeat
+    size: cover
+
 body
   background: #f6f9fc
   font-family: "Open Sans", sans-serif
@@ -45,13 +52,13 @@ h2
 
   & textarea
     max-width: 100%
-  
+
   & input[type="submit"]
     margin-top: 30px
     width: 50%
-  
+
   & input[type="date"]
-    width: 150px 
+    width: 150px
 
   & input, & textarea
     padding: 5px 10px
@@ -83,6 +90,25 @@ h2
     display: flex
     justify-content: space-between
     align-items: baseline
+
+  &__btn
+    border: none
+    background-color: transparent
+    +background('./img/icon_not_icon.svg')
+    width: 18px
+    aspect-ratio: 1
+
+    &:hover
+      cursor: pointer
+
+    &_type_remove
+      background-image: url('./img/icon_delete.png')
+
+    &_type_like
+      background-image: url('./img/icon_like_empty.png')
+
+      &.liked
+        background-image: url('./img/icon_like_full.png')
 
 // Стили ошибок
 .invalid
