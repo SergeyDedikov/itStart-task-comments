@@ -55,6 +55,9 @@ h2 {
 #new-comment input[type=date] {
   width: 150px;
 }
+#new-comment input, #new-comment textarea {
+  border-width: 1px;
+}
 
 .comment {
   position: relative;
@@ -82,12 +85,13 @@ h2 {
 }
 
 .invalid {
-  border-color: #6d0f0f;
+  border-color: #e30f0f;
 }
 
 #error {
-  color: #6d0f0f;
+  color: #8f1919;
   height: 16px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {
