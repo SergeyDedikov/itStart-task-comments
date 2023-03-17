@@ -106,11 +106,28 @@ function formateDate(date) {
       break;
 
     default:
-      string = date;
+      string = date + ', ' + strTime;
       break;
   }
 
   return string;
+}
+
+// отправка формы (вставка сообщения)
+function formSubmit(e) {
+  e.preventDefault();
+
+  let formData = {
+    name: this.name.value,
+    text: this.text.value,
+    date: this.date.value,
+  };
+
+  formData.date = formateDate(formData.date);
+
+  comments.prepend(createComment(formData));
+
+  this.reset();
 }
 
 // Events Listeners
@@ -125,20 +142,4 @@ form.text.onfocus = hideErrors;
 comments.addEventListener('click', deleteComment);
 comments.addEventListener('click', toggleLike);
 
-// отправка формы (вставка сообщения)
-form.onsubmit = function (e) {
-  console.log('Submit!');
-
-  let inputData = {
-    name: this.name.value,
-    text: this.text.value,
-    date: this.date.value,
-  };
-
-  inputData.date = formateDate(inputData.date);
-
-  comments.prepend(createComment(inputData));
-
-  this.reset();
-  return false;
-}
+form.addEventListener('submit', formSubmit);

@@ -104,7 +104,11 @@ h2 {
   cursor: pointer;
 }
 .comment__btn_type_remove {
+  opacity: 0.6;
   background-image: url("./img/icon_delete.png");
+}
+.comment__btn_type_remove:hover {
+  opacity: 1;
 }
 .comment__btn_type_like {
   background-image: url("./img/icon_like_empty.png");
