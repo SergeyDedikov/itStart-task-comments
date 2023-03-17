@@ -88,7 +88,7 @@ h2 {
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-self: center;
 }
 .comment__btn {
   border: none;
